@@ -12,22 +12,28 @@
     <form method="POST" action="https://dev.fare4z.com" enctype="multipart/form-data">
     <p>
     <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="Enter Your Name">
+    <input type="text" id="name" name="name" 
+    placeholder="Enter Your Name"required>
     </p>
 
     <p>
         <label for="pass">Password</label>
-        <input type="password" id="katalaluan" name="katalaluan" placeholder="Enter Your Password">
+        <input type="password" id="katalaluan" name="katalaluan" 
+        placeholder="Enter Your Password"disabled>
+        
     </p>
-
+        <input type="hidden" name="level"
+        value="student">
     <p>
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Enter Your Email">
+        <input type="email" id="email" name="email" 
+        placeholder="Enter Your Email"required>
     </p>
 
     <p>
         <label for="age">Age</label>
-        <input type="number" id="umur" name="umur" placeholder="Your Age">
+        <input type="number" id="umur" name="umur" 
+        placeholder="Your Age"required>
     </p>
     <p>
         <label for="dob">Date Of Birth</label>
@@ -42,7 +48,7 @@
     <p>
         <label for="gender">Gender</label><br>
         <input type="radio" value="Male">Male<br>
-        <input type="radio" value="Femal">Female 
+        <input type="radio" value="Female">Female 
     </p>
 
     <p>
@@ -50,6 +56,11 @@
         <input type="checkbox" name="Skills[]" value="html">HTML<br>
         <input type="checkbox" name="Skills[]" value="html">CSS<br>
         <input type="checkbox" name="Skills[]" value="html">JAVA<br>
+    </p>
+
+    <p>
+        <label for="File">File</label><br>
+        <input type="file">
     </p>
     <p>
         <button type="Submit">SUBMIT</button>  |  <button type="Reset">RESET</button>
