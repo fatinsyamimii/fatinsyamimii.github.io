@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction To CSS</title>
+    <!-- Internal CSS -->
+
+    <style>
+        h2 {
+            color: brown;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h2.tengah {
+            text-align: center;
+        }
+
+        .bg-darks {
+            background-color:brown;
+        }
+
+        .text-whites {
+            color: aliceblue;
+        }
+
+        #content {
+            background-color: lightcyan;
+            margin: 5px 10px 10px 5px;
+            padding: 5px;
+        }
+
+        .container .box p {
+            background-color:aqua;
+        }
+
+        .toUpperCase {
+            text-transform: uppercase;
+            text-decoration:underline;
+            
+        }
+
+        .potong {
+            text-decoration: line-through;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div id="content">
+    <h1>Welcome To JTMK</h1>
+    <h2 class="bg-darks text-whites">Selamat Datang Ke JMTK</h2>
+    <h2 class="tengah">This is Track Selection</h2>
+
+    <p style="color:blue; font-size: 20px;">Track Offered</p>
+
+    <p class="toUpperCase">Please Select Your Track :</p>
+
+    <ul>
+        <li class="potong">Software and Development Track</li>
+        <li>Networking System Track</li>
+        <li class="potong">Data Visual Track</li>
+    </ul>
+
+    <button type="SUBMIT">Apply Here !</button>
+    
+</div>
+
+<div class="container">
+    <div class="box">
+        <p>Hello</p>
+    </div>
+</div>
+
+<footer>
+    Copyright 2025
+</footer>
+
+</body>
+</html>
