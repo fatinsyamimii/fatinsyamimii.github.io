@@ -28,11 +28,11 @@
             background-color: lightcyan;
             margin: 5px 10px 10px 5px;
             padding: 5px;
-            u
+            
         }
 
         .container .box p {
-            background-color:aqua;
+            background-color:gold;
         }
 
         .toUpperCase {
@@ -44,6 +44,34 @@
         .potong {
             text-decoration: line-through;
         }
+
+        input[type="text"] , [type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color:rgb(228, 3, 78);
+            color: aliceblue;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: black;
+        }
+
+        p::first-letter {
+            font-size: 2em;
+            color:blue;
+        }
+
     </style>
 
     <!-- External CSS -->
@@ -56,6 +84,9 @@
     <h2 class="bg-darks text-whites">Selamat Datang Ke JMTK</h2>
     <h2 class="tengah">This is Track Selection</h2>
 
+    <input type="text" id="name" placeholder="Please Enter Your Name">
+    <input type="email" id="email" placeholder="Enter Your Email">
+
     <p style="color:blue; font-size: 20px;">Track Offered</p>
 
     <p class="toUpperCase">Please Select Your Track :</p>
@@ -66,7 +97,7 @@
         <li class="potong">Data Visual Track</li>
     </ul>
 
-    <button type="SUBMIT">Apply Here !</button>
+    <button class="button" type="submit">Apply Here !</button>
     
 </div>
 
