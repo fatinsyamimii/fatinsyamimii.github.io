@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration</title>
+</head>
+<body>
+  <form id="regForm">
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" required />
+    </div>
+    <div class="form-group">
+      <label for="icNumber">IC Number</label>
+      <input type="text" id="icNumber" maxlength="12" required />
+    </div>
+    <div class="form-group">
+    <label for="gender">Gender</label>
+    <select id="gender" required>
+      <option value="">-- Select Gender --</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="course">Course</label>
+      <select id="course" required>
+        <option value="">-- Select Course --</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Mobile App">Mobile App</option>
+        <option value="Database">Database</option>
+        <option value="Cybersecurity">Cybersecurity</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label><input type="checkbox" id="terms" /> I agree to the terms</label>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="messages">
+    <div id="courseMessage"></div>
+    <div id="greeting"></div>
+    <div id="summary"></div>
+  </div>
+
+  <script>
+    const courseMessage = document.getElementById('courseMessage');
+    const greeting = document.getElementById('greeting');
+    const summary = document.getElementById('summary');
+
+    document.getElementById('course').addEventListener('change', function () {
+      const msg = {
+        'Web Development': 'Get ready to design amazing websites!',
+        'Mobile App': 'Build powerful apps for Android and iOS.',
+        'Database': 'Learn how to manage and secure data.',
+        'Cybersecurity': 'Defend systems from digital threats.'
+      };
+      courseMessage.textContent = msg[this.value] || '';
+    });
+
+    document.getElementById('icNumber').addEventListener('input', function () {
+      const ic = this.value;
+      if (/^\d{12}$/.test(ic)) {
+        const lastDigit = parseInt(ic[11]);
+        document.getElementById('gender').value = lastDigit % 2 === 0 ? 'Female' : 'Male';
+      } else {
+        document.getElementById('gender').value = '';
+      }
+    });
+
+    document.getElementById('regForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('fullName').value.trim();
+      const ic = document.getElementById('icNumber').value.trim();
+      const gender = document.getElementById('gender').value;
+      const course = document.getElementById('course').value;
+      const terms = document.getElementById('terms').checked;
+
+      if (!/^\d{12}$/.test(ic)) return alert("IC must be exactly 12 digits.");
+
+      const year = parseInt(ic.substring(0, 2)) + 1900;
+      const age = new Date().getFullYear() - year;
+      if (age < 17) return alert("Must be at least 17 years old to register.");
+      if (!terms) return alert("You must agree to the terms and conditions.");
+
+      const greetText = gender === 'Male' ? `Welcome, Mr. ${name}!` : `Welcome, Ms. ${name}!`;
+      greeting.textContent = greetText;
+
+      let fee = 1000;
+      if (age < 20) fee *= 0.9;
+      if (course === 'Cybersecurity') fee += 200;
+
+      summary.innerHTML = `Registration fee: RM ${fee.toFixed(2)}`;
+    });
+
+  </script>
+</body>
+</html>

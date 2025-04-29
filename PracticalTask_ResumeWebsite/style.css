@@ -1,0 +1,126 @@
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:rgb(146, 170, 168);
+    color:black;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container a {
+    text-decoration: none;
+    color:#08305b;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.container a:hover {
+    color:rgb(209, 24, 24);
+}
+
+
+img.rounded-circle {
+    border: 5px solid #0c0d0f;
+    padding: 5px;
+}
+
+
+.profile-img {
+    width: 150px;        
+    height: 150px;      
+    border-radius: 50%;  
+    object-fit: cover; 
+    border: 5px solid black; 
+    margin-bottom: 15px;
+}
+
+
+
+h2 {
+    color: rgb(11, 9, 9);
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+p {
+    color:#17191c;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+
+.container.mt-4 {
+    margin-top: 30px;
+}
+
+
+h3 {
+    color: #0a2e53;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

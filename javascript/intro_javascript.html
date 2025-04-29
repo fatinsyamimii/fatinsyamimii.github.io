@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Javascript</title>
+</head>
+<body>
+    
+    <!-- Inline Javascript-->
+
+    <button onclick="alert('My Name is Mimi')">Click Me</button>
+
+    <!-- Internal Javascript-->
+
+    <br>
+
+    <button onclick="register()">Register Here!</button>
+
+<script>
+    // alert("Welcome To My Page");
+
+function register() {
+    // Ask student enter name using prompt
+
+    let studentName = prompt("Please Enter Your Name");
+    let studentAge = prompt("Please Enter Your Age");
+
+    // Check form validation
+    if (studentName) {
+        alert("Welcome to the class " + studentName + "\n Age : " + studentAge);
+    } else {
+        alert("Please Enter Your Name to Proceed");
+    }
+
+    }
+
+</script>
+<!-- External JS-->
+<script src="function.js"></script>
+<script src="CheckAge.js"></script>
+<script src="Modulus.js"></script>
+<script src="looping.js"></script>
+
+</body>
+</html>
